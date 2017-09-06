@@ -5,7 +5,16 @@ Fork of [Adam Burgess' Mono buildpack for Heroku](https://github.com/adamburgess
 #### oh no this is outdated what do i do?
 When this inevitably becomes outdated again you can probably just copy over the cert-sync.cs from [mono/mono](https://github.com/mono/mono) and get an updated NuGet commandline from [the official site](https://www.nuget.org/downloads). Hopefully Adam's CircleCI runner is still up by then. Fixing any problems caused by the passage of time is left as an exercise for the reader.
 
+##### oh no cert-sync is gone what do i do?
+You've got a problem on your hands, buddy.
+
+##### oh no xbuild is gone what do i do?
+Switch to msbuild.
+
+---
+
 Here follows the rest of the original Readme. Just be careful not to use an old (pre-TLS 1.2) version of mono or the deploy will fail!
+
 
 #### what to use this for
 
