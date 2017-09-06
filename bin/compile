@@ -115,7 +115,7 @@ EOF
 
 set +e
 
-curl https://nuget.org/nuget.exe -Lfs > $BUILDPACK_DIR/nuget.exe
+curl https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -Lfs > $BUILDPACK_DIR/nuget.exe
 NUGET_STATUS=$?
 
 set -e
