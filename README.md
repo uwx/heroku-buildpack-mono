@@ -1,4 +1,11 @@
-Mono buildpack for heroku, with the latest daily mono release.   [![](https://circleci.com/gh/adamburgess/heroku-buildpack-mono-builder.png?style=shield&circle-token=fe5a1697660ac8727b496f624407ea006b2069d7)](https://circleci.com/gh/adamburgess/heroku-buildpack-mono-builder)
+[![](https://circleci.com/gh/adamburgess/heroku-buildpack-mono-builder.png?style=shield&circle-token=fe5a1697660ac8727b496f624407ea006b2069d7)](https://circleci.com/gh/adamburgess/heroku-buildpack-mono-builder)
+
+Fork of [Adam Burgess' Mono buildpack for Heroku](https://github.com/adamburgess/heroku-buildpack-mono), updated with latest mono cert-sync (with BTLS/TLS 1.2) and NuGet 4.1.0
+
+#### oh no this is outdated what do i do?
+When this inevitably becomes outdated again you can probably just copy over the cert-sync.cs from [mono/mono](https://github.com/mono/mono) and get an updated NuGet commandline from [the official site](https://www.nuget.org/downloads). Hopefully Adam's CircleCI runner is still up by then. Fixing any problems caused by the passage of time is left as an exercise for the reader.
+
+Here follows the rest of the original Readme. Just be careful not to use an old (pre-TLS 1.2) version of mono or the deploy will fail!
 
 #### what to use this for
 
@@ -22,7 +29,7 @@ Create a `.mono` file to configure more options:
 ````bash
 # put a tag name here that has a corresponding release to specify a version*
 # omitting this will use the latest available mono version
-MONO_VERSION=96e40c5793ff
+MONO_VERSION=90450cc1480d
 # specify the build you want, either minimal (default) or full
 # see below for explanation
 MONO_TYPE=minimal
