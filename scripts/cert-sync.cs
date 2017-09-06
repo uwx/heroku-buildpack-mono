@@ -211,7 +211,7 @@ namespace Mono.Tools
 
 		static void Header ()
 		{
-			Console.WriteLine (new AssemblyInfo ().ToString ());
+			Console.WriteLine ("cert-sync");
 		}
 
 		static void Help ()
